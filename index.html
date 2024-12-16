@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ยินดีต้อนรับสู่จังหวัดเพชรบุรี</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #ffcc66;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .content {
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            margin: 5px 0;
+            padding: 10px 20px;
+            background-color: #ff9900;
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #cc7a00;
+        }
+        .output {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        ยินดีต้อนรับสู่จังหวัดเพชรบุรี
+    </header>
+    <section>
+        <div class="content">
+            <button class="button" onclick="showTouristSpots()">สถานที่ท่องเที่ยว</button>
+            <div id="touristSpots" class="output"></div>
+        </div>
+        <div class="content">
+            <button class="button" onclick="showTraditions()">ประเพณี</button>
+            <div id="traditions" class="output"></div>
+        </div>
+        <div class="content">
+            <button class="button" onclick="showLocalFoods()">อาหารขึ้นชื่อ</button>
+            <div id="localFoods" class="output"></div>
+        </div>
+        <div class="content">
+            <button class="button" onclick="showAccommodations()">ที่พักแนะนำ</button>
+            <div id="accommodations" class="output"></div>
+        </div>
+    </section>
+    <script>
+        function showTouristSpots() {
+            const spots = `
+                <ul>
+                    <li>พระราชนิเวศน์มฤคทายวัน</li>
+                    <li>หาดชะอำ</li>
+                    <li>เขาวัง (พระนครคีรี)</li>
+                </ul>
+            `;
+            document.getElementById("touristSpots").innerHTML = spots;
+        }
+
+        function showTraditions() {
+            const traditions = `
+                <ul>
+                    <li>ประเพณีแห่พระเขาวัง</li>
+                    <li>ประเพณีตักบาตรดอกไม้</li>
+                    <li>ประเพณีลอยกระทงสาย</li>
+                </ul>
+            `;
+            document.getElementById("traditions").innerHTML = traditions;
+        }
+
+        function showLocalFoods() {
+            const foods = `
+                <ul>
+                    <li>ขนมหม้อแกง</li>
+                    <li>ปลาทูต้มเค็ม</li>
+                    <li>น้ำตาลโตนด</li>
+                </ul>
+            `;
+            document.getElementById("localFoods").innerHTML = foods;
+        }
+
+        function showAccommodations() {
+            const accommodations = `
+                <ul>
+                    <li>โรงแรมดุสิตธานี หัวหิน</li>
+                    <li>บ้านพักริมทะเลชะอำ</li>
+                    <li>เดอะบลูสกาย รีสอร์ท</li>
+                </ul>
+            `;
+            document.getElementById("accommodations").innerHTML = accommodations;
+        }
+    </script>
+</body>
+</html>
